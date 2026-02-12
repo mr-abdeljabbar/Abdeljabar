@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -185,17 +185,31 @@ export function Contact() {
                 </h3>
                 <div className="flex gap-3">
                   {[
-                    { icon: Github, href: 'https://github.com', label: 'GitHub' },
+                    {
+                      icon: Facebook,
+                      href: 'https://www.facebook.com/people/Abdeljabar-Bougrine/61585574073923/',
+                      label: 'Facebook'
+                    },
+                    {
+                      icon: Instagram,
+                      href: 'https://www.instagram.com/go.abdeljabar',
+                      label: 'Instagram'
+                    },
+                    {
+                      icon: X,
+                      href: 'https://x.com/b_abdeljabbar',
+                      label: 'X'
+                    },
                     {
                       icon: Linkedin,
-                      href: 'https://linkedin.com',
+                      href: 'https://www.linkedin.com/in/babdeljabbar',
                       label: 'LinkedIn',
                     },
                     {
-                      icon: Twitter,
-                      href: 'https://twitter.com',
-                      label: 'Twitter',
-                    },
+                      icon: MessageCircle,
+                      href: 'https://wa.me/212700789623',
+                      label: 'WhatsApp',
+                    }
                   ].map((social) => (
                     <a
                       key={social.label}

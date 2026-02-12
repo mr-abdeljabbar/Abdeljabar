@@ -11,94 +11,100 @@ const categories = ['All', 'Frontend', 'Full-Stack', 'Backend', 'Mobile'];
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'ChronoMaster – Smart Stopwatch & Timer Web App',
     description:
-      'A full-featured online marketplace with real-time inventory, payment processing, and admin dashboard.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop',
+      'A lightweight web-based stopwatch and timer application designed for tracking time with a clean and interactive user interface. Built as a modern frontend app and hosted on Netlify.',
+    image: '/images/chronomaster.png',
     techStack: [
-      { name: 'React', color: 'blue' },
       { name: 'Node.js', color: 'green' },
-      { name: 'PostgreSQL', color: 'cyan' },
-      { name: 'Redis', color: 'red' },
-    ],
-    liveDemo: 'https://example.com',
-    githubRepo: 'https://github.com',
-    category: 'Full-Stack',
-  },
-  {
-    title: 'AI Content Generator',
-    description:
-      'SaaS platform leveraging OpenAI API for automated content creation, SEO optimization, and scheduling.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
-    techStack: [
-      { name: 'Next.js', color: 'zinc' },
-      { name: 'TypeScript', color: 'blue' },
-      { name: 'Python', color: 'yellow' },
-      { name: 'AWS', color: 'orange' },
-    ],
-    liveDemo: 'https://example.com',
-    githubRepo: 'https://github.com',
-    category: 'Full-Stack',
-  },
-  {
-    title: 'Financial Dashboard',
-    description:
-      'Real-time analytics dashboard for tracking investments, portfolios, and market trends with data visualization.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop',
-    techStack: [
       { name: 'React', color: 'blue' },
-      { name: 'TypeScript', color: 'blue' },
-      { name: 'D3.js', color: 'orange' },
-      { name: 'GraphQL', color: 'pink' },
+      { name: 'JavaScript', color: 'yellow' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Netlify', color: 'blue' },
     ],
-    liveDemo: 'https://example.com',
+    liveDemo: 'https://chronomasterapp.netlify.app/',
     githubRepo: 'https://github.com',
     category: 'Frontend',
   },
   {
-    title: 'Task Management API',
+    title: 'AtlasDrive – Car Rental & Mobility Web Platform',
     description:
-      'RESTful API for team collaboration with real-time updates, file sharing, and project tracking features.',
-    image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=450&fit=crop',
+      'A car rental showcase web application that presents vehicle options and rental services with a modern UI. It works as a frontend web platform hosted on Netlify.',
+    image: '/images/atlasdrive.png',
     techStack: [
       { name: 'Node.js', color: 'green' },
-      { name: 'MongoDB', color: 'green' },
-      { name: 'Docker', color: 'blue' },
-      { name: 'Redis', color: 'red' },
-    ],
-    liveDemo: 'https://example.com',
-    githubRepo: 'https://github.com',
-    category: 'Backend',
-  },
-  {
-    title: 'Social Media App',
-    description:
-      'Mobile-first social platform with stories, messaging, notifications, and content discovery algorithms.',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=450&fit=crop',
-    techStack: [
       { name: 'React', color: 'blue' },
-      { name: 'Node.js', color: 'green' },
-      { name: 'PostgreSQL', color: 'cyan' },
-      { name: 'AWS', color: 'orange' },
+      { name: 'JavaScript', color: 'yellow' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Netlify', color: 'blue' },
     ],
-    liveDemo: 'https://example.com',
+    liveDemo: 'https://atlasdrive.netlify.app/',
     githubRepo: 'https://github.com',
-    category: 'Mobile',
+    category: 'Frontend',
   },
   {
-    title: 'Healthcare Portal',
+    title: 'LibriFind – Online Book Discovery Web App',
     description:
-      'HIPAA-compliant patient management system with appointment scheduling, telemedicine, and EHR integration.',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=450&fit=crop',
+      'A book search and discovery web application that allows users to explore books through a simple and interactive interface. Built as a frontend JavaScript app deployed on Netlify.',
+    image: '/images/librifind.png',
     techStack: [
-      { name: 'Next.js', color: 'zinc' },
+      { name: 'Node.js', color: 'green' },
+      { name: 'React', color: 'blue' },
+      { name: 'JavaScript', color: 'yellow' },
       { name: 'TypeScript', color: 'blue' },
-      { name: 'Prisma', color: 'emerald' },
-      { name: 'Docker', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Netlify', color: 'blue' },
     ],
-    liveDemo: 'https://example.com',
+    liveDemo: 'https://librifind.netlify.app/',
     githubRepo: 'https://github.com',
-    category: 'Full-Stack',
+    category: 'Frontend',
+  },
+  {
+    title: 'EnglishSchool Kelaa – Language Learning School Website',
+    description:
+      'A static educational website presenting an English language school, courses, and contact information. Designed as a simple informational site for students and visitors.',
+    image: '/images/englishschoolkelaa.png',
+    techStack: [
+      { name: 'Node.js', color: 'green' },
+      { name: 'React', color: 'blue' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://englishschoolkelaa.netlify.app/',
+    githubRepo: 'https://github.com',
+    category: 'Frontend',
+  },
+  {
+    title: 'La Délice – Restaurant / Food Service Website',
+    description:
+      'A static website showcasing a restaurant or food brand, including menu and presentation content. Designed for branding and customer information.',
+    image: '/images/ladelice.png',
+    techStack: [
+      { name: 'Node.js', color: 'green' },
+      { name: 'React', color: 'blue' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://ladelice.netlify.app/',
+    githubRepo: 'https://github.com',
+    category: 'Frontend',
+  },
+  {
+    title: 'CERYSA – Developer Portfolio Website',
+    description:
+      'A personal portfolio website showcasing projects, skills, and developer identity with a tech-themed design. Built as a static web portfolio.',
+    image: '/images/cerysa.png',
+    techStack: [
+      { name: 'HTML', color: 'orange' },
+      { name: 'CSS', color: 'blue' },
+      { name: 'JavaScript', color: 'yellow' },
+      { name: 'Cloudflare', color: 'orange' },
+    ],
+    liveDemo: 'http://cerysa.com/',
+    githubRepo: 'https://github.com',
+    category: 'Frontend',
   },
 ];
 
@@ -205,7 +211,7 @@ export function Projects() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {[
               { icon: Code2, name: 'React & Next.js' },
               { icon: Database, name: 'Node.js & Databases' },
@@ -218,7 +224,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center gap-3 p-6 bg-zinc-900/30 border border-white/5 rounded-xl hover:border-emerald-500/20 transition-colors"
+                className="flex flex-col items-center gap-3 p-6 bg-zinc-900/30 border border-white/5 rounded-xl hover:border-emerald-500/20 transition-colors min-w-[140px] flex-1 sm:flex-none"
               >
                 <tech.icon className="w-8 h-8 text-emerald-400" />
                 <span className="text-sm text-zinc-400 text-center">

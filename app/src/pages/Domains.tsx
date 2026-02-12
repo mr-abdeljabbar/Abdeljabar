@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Globe, Search, Filter, Sparkles, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-
 import { DomainCard } from '@/components/cards';
 import { PageHeader } from '@/components/sections';
 
@@ -15,7 +14,8 @@ const domains = [
     domain: '01fox.com',
     status: 'Premium' as const,
     category: 'Tech',
-    price: '$4,900',
+    price: '$200',
+    buyUrl: 'https://forsale.godaddy.com/forsale/01fox.com',
     description:
       'Perfect for tech startups, digital products, or modern innovation platforms.',
   },
@@ -23,15 +23,17 @@ const domains = [
     domain: 'chort.net',
     status: 'For Sale' as const,
     category: 'Tech',
-    price: '$2,800',
+    price: '$100',
+    buyUrl: 'https://forsale.godaddy.com/forsale/chort.net',
     description:
       'Perfect for gaming brands, edgy communities, or underground culture projects.',
   },
   {
     domain: 'memeorbit.com',
-    status: 'Premium' as const,
-    category: 'Tech',
-    price: '$6,500',
+    status: 'For Sale' as const,
+    category: 'Crypto',
+    price: '$150',
+    buyUrl: 'https://forsale.godaddy.com/forsale/memeorbit.com',
     description:
       'Perfect for meme platforms, viral content hubs, or social entertainment brands.',
   },
@@ -39,23 +41,26 @@ const domains = [
     domain: 'purpleslot.com',
     status: 'For Sale' as const,
     category: 'Crypto',
-    price: '$3,900',
+    price: '$150',
+    buyUrl: 'https://forsale.godaddy.com/forsale/purpleslot.com',
     description:
       'Perfect for gaming platforms, crypto casinos, or online entertainment brands.',
   },
   {
     domain: 'syntaxserver.com',
-    status: 'Premium' as const,
-    category: 'SaaS',
-    price: '$7,500',
+    status: 'For Sale' as const,
+    category: 'Crypto',
+    price: '$150',
+    buyUrl: 'https://forsale.godaddy.com/forsale/syntaxserver.com',
     description:
       'Perfect for developer platforms, APIs, cloud tools, or backend infrastructure.',
   },
   {
     domain: 'hidling.com',
     status: 'For Sale' as const,
-    category: 'Tech',
-    price: '$2,200',
+    category: 'Crypto',
+    price: '$150',
+    buyUrl: 'https://forsale.godaddy.com/forsale/hidling.com',
     description:
       'Perfect for privacy tools, security apps, or stealth tech products.',
   },
@@ -63,7 +68,8 @@ const domains = [
     domain: 'happiplus.com',
     status: 'Premium' as const,
     category: 'SaaS',
-    price: '$5,500',
+    price: '$250',
+    buyUrl: 'https://forsale.godaddy.com/forsale/happiplus.com',
     description:
       'Perfect for wellness apps, subscription platforms, or lifestyle services.',
   },
@@ -71,15 +77,17 @@ const domains = [
     domain: 'crateloop.com',
     status: 'For Sale' as const,
     category: 'SaaS',
-    price: '$4,200',
+    price: '$250',
+    buyUrl: 'https://forsale.godaddy.com/forsale/crateloop.com',
     description:
       'Perfect for logistics platforms, SaaS tools, or delivery automation systems.',
   },
   {
     domain: 'clickyx.com',
-    status: 'For Sale' as const,
-    category: 'Tech',
-    price: '$3,300',
+    status: 'Premium' as const,
+    category: 'Finance',
+    price: '$475',
+    buyUrl: 'https://forsale.godaddy.com/forsale/clickyx.com',
     description:
       'Perfect for marketing tools, ad platforms, or growth analytics brands.',
   },
@@ -87,23 +95,26 @@ const domains = [
     domain: 'yieldaro.com',
     status: 'Premium' as const,
     category: 'Finance',
-    price: '$8,900',
+    price: '$475',
+    buyUrl: 'https://forsale.godaddy.com/forsale/yieldaro.com',
     description:
       'Perfect for fintech platforms, investment tools, or performance analytics brands.',
   },
   {
     domain: 'unaffliction.com',
-    status: 'Premium' as const,
-    category: 'Tech',
-    price: '$12,000',
+    status: 'For Sale' as const,
+    category: 'SaaS',
+    price: '$150',
+    buyUrl: 'https://forsale.godaddy.com/forsale/unaffliction.com',
     description:
       'Perfect for mental health platforms, wellness brands, or motivational projects.',
   },
   {
     domain: 'cerysa.com',
     status: 'Premium' as const,
-    category: 'AI',
-    price: '$9,500',
+    category: 'SaaS',
+    price: '$150',
+    buyUrl: 'https://cerysa.com/',
     description:
       'Perfect for SaaS startups, AI products, or modern tech companies.',
   },
@@ -122,7 +133,7 @@ export function Domains() {
     return matchesCategory && matchesSearch;
   });
 
-  const availableCount = domains.filter((d) => d.status !== 'Sold').length;
+  const availableCount = domains.filter((d) => (d.status as string) !== 'Sold').length;
   const premiumCount = domains.filter((d) => d.status === 'Premium').length;
 
   return (
@@ -163,7 +174,7 @@ export function Domains() {
             </div>
             <div className="text-left">
               <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-xs text-zinc-400">Escrow Ready</div>
+              <div className="text-xs text-zinc-400">GoDaddy Marketplace</div>
             </div>
           </div>
         </div>
@@ -261,12 +272,12 @@ export function Domains() {
               </h2>
               <p className="text-lg text-zinc-400 mb-8">
                 Every domain transaction is handled with professionalism and
-                security. I use trusted escrow services to ensure safe transfers
+                security. I use trusted GoDaddy Marketplace to ensure safe transfers
                 for both parties.
               </p>
               <div className="space-y-4">
                 {[
-                  'Escrow.com verified transactions',
+                  'GoDaddy Marketplace verified transactions',
                   'Fast domain push or auth code transfer',
                   'Payment plans available for premium domains',
                   'Professional communication throughout',
@@ -300,7 +311,7 @@ export function Domains() {
                     additional domains in my portfolio. Let me know your
                     requirements.
                   </p>
-                  <a href="mailto:owner@abdeljabar.com">
+                  <a href="/contact">
                     <Button className="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold">
                       <Globe className="w-4 h-4 mr-2" />
                       Make an Inquiry

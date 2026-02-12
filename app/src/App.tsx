@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 import { Navbar } from '@/components/layout';
 import { Home, About, Projects, Domains, Contact } from '@/pages';
+import { Github, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 import './App.css';
 
@@ -43,8 +44,8 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500/20 to-blue-500/20 border border-white/10 flex items-center justify-center">
-                  <span className="text-emerald-400 font-bold text-sm">D</span>
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500/20 to-blue-500/20 border border-white/10 flex items-center justify-center overflow-hidden p-0.5">
+                  <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
                 </div>
                 <span className="text-zinc-400 text-sm">
                   © 2024 Abdeljabar.com. All rights reserved.
@@ -53,28 +54,52 @@ function App() {
               </div>
               <div className="flex items-center gap-6">
                 <a
-                  href="https://github.com"
+                  href="https://www.facebook.com/people/Abdeljabar-Bougrine/61585574073923/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-500 hover:text-emerald-400 transition-colors text-sm"
+                  className="text-zinc-500 hover:text-emerald-400 transition-colors"
                 >
-                  GitHub
+                  <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.instagram.com/go.abdeljabar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-500 hover:text-emerald-400 transition-colors text-sm"
+                  className="text-zinc-500 hover:text-emerald-400 transition-colors"
                 >
-                  LinkedIn
+                  <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/b_abdeljabbar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-500 hover:text-emerald-400 transition-colors text-sm"
+                  className="text-zinc-500 hover:text-emerald-400 transition-colors"
                 >
-                  Twitter
+                  <X className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/babdeljabbar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-500 hover:text-emerald-400 transition-colors"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://github.com/mr-abdeljabbar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-500 hover:text-emerald-400 transition-colors"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://wa.me/212700789623"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-500 hover:text-emerald-400 transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5" />
                 </a>
               </div>
             </div>

@@ -9,6 +9,7 @@ interface DomainCardProps {
   category: string;
   price?: string;
   description?: string;
+  buyUrl?: string;
   index?: number;
 }
 
@@ -48,6 +49,7 @@ export function DomainCard({
   category,
   price,
   description,
+  buyUrl,
   index = 0,
 }: DomainCardProps) {
   const statusStyle = statusConfig[status];
@@ -118,18 +120,29 @@ export function DomainCard({
         {/* Trust Element */}
         <div className="flex items-center gap-2 mb-4 text-xs text-zinc-500">
           <Shield className="w-4 h-4 text-emerald-500/60" />
-          <span>Escrow-ready transfer</span>
+          <span>GoDaddy Marketplace</span>
         </div>
 
         {/* CTA Button */}
         {status !== 'Sold' && (
-          <Button
-            onClick={handleInquiry}
-            className="w-full bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-300 font-medium transition-all duration-300 group/btn"
-          >
-            <span>Inquire to Buy</span>
-            <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform" />
-          </Button>
+          buyUrl ? (
+            <a href={buyUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+              <Button
+                className="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold transition-all duration-300 group/btn"
+              >
+                <span>Buy Now</span>
+                <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform" />
+              </Button>
+            </a>
+          ) : (
+            <Button
+              onClick={handleInquiry}
+              className="w-full bg-zinc-800 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-300 font-medium transition-all duration-300 group/btn"
+            >
+              <span>Inquire to Buy</span>
+              <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform" />
+            </Button>
+          )
         )}
         {status === 'Sold' && (
           <Button
