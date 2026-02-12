@@ -54,7 +54,7 @@ export function ProjectCard({
       className="group relative"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
+
       <div className="relative h-full bg-zinc-900/50 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-emerald-500/30 transition-all duration-500">
         {/* Image Container */}
         <div className="relative aspect-video overflow-hidden">
@@ -92,10 +92,9 @@ export function ProjectCard({
               <Badge
                 key={tech.name}
                 variant="outline"
-                className={`text-xs font-medium ${
-                  techColors[tech.name] ||
+                className={`text-xs font-medium ${techColors[tech.name] ||
                   'bg-zinc-500/10 text-zinc-400 border-zinc-500/20'
-                }`}
+                  }`}
               >
                 {tech.name}
               </Badge>
@@ -103,7 +102,7 @@ export function ProjectCard({
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-2 pt-2">
+          <div className="flex flex-col sm:flex-row gap-2 pt-2">
             {liveDemo && (
               <Button
                 size="sm"

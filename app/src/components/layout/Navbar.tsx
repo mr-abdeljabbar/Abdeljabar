@@ -82,16 +82,14 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="/contact"
-
+            <Link
+              to="/contact"
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-950 bg-emerald-500 rounded-lg hover:bg-emerald-400 transition-colors duration-300"
             >
               <Globe className="w-4 h-4" />
               Get in Touch
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -147,14 +145,13 @@ export function Navbar() {
                 transition={{ delay: navLinks.length * 0.1 }}
                 className="pt-2"
               >
-                <a
-                  href="mailto:owner@abdeljabar.com"
-
+                <Link
+                  to="/contact"
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-medium text-zinc-950 bg-emerald-500 rounded-lg hover:bg-emerald-400 transition-colors"
                 >
                   <Globe className="w-4 h-4" />
                   Get in Touch
-                </a>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

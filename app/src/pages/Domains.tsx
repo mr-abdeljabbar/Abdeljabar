@@ -7,7 +7,7 @@ import { DomainCard } from '@/components/cards';
 import { PageHeader } from '@/components/sections';
 
 
-const categories = ['All', 'Tech', 'Finance', 'SaaS', 'AI', 'Crypto', 'Health'];
+const categories = ['All', 'Tech', 'Finance', 'SaaS', 'AI', 'Crypto'];
 
 const domains = [
   {
@@ -188,7 +188,7 @@ export function Domains() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col lg:flex-row gap-4"
+            className="flex flex-col md:flex-row gap-4"
           >
             {/* Search */}
             <div className="relative flex-1">

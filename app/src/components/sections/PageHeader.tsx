@@ -14,7 +14,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ icon: Icon, badge, title1, title2, description, children }: PageHeaderProps) {
     return (
-        <section className="relative py-16 lg:py-24">
+        <section className="relative py-16 lg:py-24 overflow-hidden">
             <div className="absolute inset-0">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[128px]" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[128px]" />
@@ -34,7 +34,7 @@ export function PageHeader({ icon: Icon, badge, title1, title2, description, chi
                         <Icon className="w-4 h-4 mr-2" />
                         {badge}
                     </Badge>
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                         {title1} <span className="gradient-text">{title2}</span>
                     </h1>
                     <p className="text-lg text-zinc-400">

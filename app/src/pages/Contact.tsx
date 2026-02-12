@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 pb-16">
       {/* Header */}
-      <section className="relative py-16 lg:py-24">
+      <section className="relative py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/3 w-96 h-96 bg-emerald-500/5 rounded-full blur-[128px]" />
           <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-[128px]" />

@@ -22,11 +22,22 @@ function ScrollToHashElement() {
   return null;
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-zinc-950">
+      <div className="min-h-screen bg-zinc-950 overflow-x-hidden">
+        <ScrollToTop />
         <ScrollToHashElement />
         <Navbar />
 

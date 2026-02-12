@@ -7,7 +7,7 @@ import { ProjectCard } from '@/components/cards';
 import { PageHeader } from '@/components/sections';
 
 
-const categories = ['All', 'Frontend', 'Full-Stack', 'Mobile'];
+const categories = ['All', 'Frontend', 'Full-Stack', 'SaaS', 'Mobile'];
 
 const projects = [
   {
@@ -40,7 +40,7 @@ const projects = [
     ],
     liveDemo: 'https://atlasdrive.netlify.app/',
     githubRepo: 'https://github.com/mr-abdeljabbar/AtlasDrive/',
-    category: 'Frontend',
+    category: 'Full-Stack',
   },
   {
     title: 'LibriFind – Online Book Discovery Web App',
@@ -73,7 +73,7 @@ const projects = [
     ],
     liveDemo: 'https://englishschoolkelaa.netlify.app/',
     githubRepo: 'https://github.com/mr-abdeljabbar/ESK/',
-    category: 'Frontend',
+    category: 'Full-Stack',
   },
   {
     title: 'La Délice – Restaurant / Food Service Website',
@@ -89,12 +89,12 @@ const projects = [
     ],
     liveDemo: 'https://ladelice.netlify.app/',
     githubRepo: 'https://github.com/mr-abdeljabbar/La-Delice/',
-    category: 'Frontend',
+    category: 'Full-Stack',
   },
   {
-    title: 'CERYSA – Developer Portfolio Website',
+    title: 'CERYSA – Cyber-Themed Developer Website',
     description:
-      'A personal portfolio website showcasing projects, skills, and developer identity with a tech-themed design. Built as a static web portfolio.',
+      'CERYSA is a personal developer website showcasing identity, projects, and technical skills with a futuristic hacker-style design. It serves as a digital profile for presenting web development work and professional branding.',
     image: '/images/cerysa.png',
     techStack: [
       { name: 'HTML', color: 'orange' },
@@ -103,7 +103,7 @@ const projects = [
       { name: 'Cloudflare', color: 'orange' },
     ],
     liveDemo: 'http://cerysa.com/',
-    category: 'Frontend',
+    category: 'SaaS',
   },
 ];
 
