@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { Navbar } from '@/components/layout';
 import { Home, About, Projects, Domains, Contact } from '@/pages';
 import { Github, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
-
 import './App.css';
 
 function ScrollToHashElement() {

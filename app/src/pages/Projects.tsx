@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Layers, Filter, Code2, Globe, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/cards';
-
 import { PageHeader } from '@/components/sections';
 
 
@@ -36,7 +35,7 @@ const projects = [
       { name: 'React', color: 'blue' },
       { name: 'JavaScript', color: 'yellow' },
       { name: 'Tailwind', color: 'cyan' },
-      { name: 'Netlify', color: 'blue' },
+      { name: 'Netlify', color: 'red' },
     ],
     liveDemo: 'https://atlasdrive.netlify.app/',
     githubRepo: 'https://github.com/mr-abdeljabbar/AtlasDrive/',
