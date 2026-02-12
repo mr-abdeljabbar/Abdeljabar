@@ -7,7 +7,7 @@ import { ProjectCard } from '@/components/cards';
 import { PageHeader } from '@/components/sections';
 
 
-const categories = ['All', 'Frontend', 'Full-Stack', 'Backend', 'Mobile'];
+const categories = ['All', 'Frontend', 'Full-Stack', 'Mobile'];
 
 const projects = [
   {
@@ -23,7 +23,7 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://chronomasterapp.netlify.app/',
-    githubRepo: 'https://github.com',
+    githubRepo: 'https://github.com/mr-abdeljabbar/Chronomaster/',
     category: 'Frontend',
   },
   {
@@ -39,7 +39,7 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://atlasdrive.netlify.app/',
-    githubRepo: 'https://github.com',
+    githubRepo: 'https://github.com/mr-abdeljabbar/AtlasDrive/',
     category: 'Frontend',
   },
   {
@@ -56,7 +56,7 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://librifind.netlify.app/',
-    githubRepo: 'https://github.com',
+    githubRepo: 'https://github.com/mr-abdeljabbar/LibriFind/',
     category: 'Frontend',
   },
   {
@@ -72,7 +72,7 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://englishschoolkelaa.netlify.app/',
-    githubRepo: 'https://github.com',
+    githubRepo: 'https://github.com/mr-abdeljabbar/ESK/',
     category: 'Frontend',
   },
   {
@@ -88,7 +88,7 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://ladelice.netlify.app/',
-    githubRepo: 'https://github.com',
+    githubRepo: 'https://github.com/mr-abdeljabbar/La-Delice/',
     category: 'Frontend',
   },
   {
@@ -103,7 +103,6 @@ const projects = [
       { name: 'Cloudflare', color: 'orange' },
     ],
     liveDemo: 'http://cerysa.com/',
-    githubRepo: 'https://github.com',
     category: 'Frontend',
   },
 ];
