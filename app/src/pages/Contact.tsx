@@ -60,7 +60,8 @@ export function Contact() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-3xl blur-xl" />
                 <form
-                  onSubmit={handleSubmit}
+                  action="https://formspree.io/f/xreapdog"
+                  method="POST"
                   className="relative p-8 bg-zinc-900/50 border border-white/5 rounded-3xl space-y-6"
                 >
                   <div className="grid sm:grid-cols-2 gap-6">
@@ -69,6 +70,7 @@ export function Contact() {
                         Name
                       </label>
                       <Input
+                        name="name"
                         type="text"
                         placeholder="Your name"
                         required
@@ -80,6 +82,7 @@ export function Contact() {
                         Email
                       </label>
                       <Input
+                        name="email"
                         type="email"
                         placeholder="your@email.com"
                         required
@@ -93,6 +96,7 @@ export function Contact() {
                       Subject
                     </label>
                     <Input
+                      name="subject"
                       type="text"
                       placeholder="Project inquiry / Domain purchase / Other"
                       required
@@ -105,6 +109,7 @@ export function Contact() {
                       Message
                     </label>
                     <Textarea
+                      name="message"
                       placeholder="Tell me about your project or inquiry..."
                       required
                       rows={5}
