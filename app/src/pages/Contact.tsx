@@ -6,11 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 
 export function Contact() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    alert('Thank you for your message! I will get back to you soon.');
-  };
+
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 pb-16">
