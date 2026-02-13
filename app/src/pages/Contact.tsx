@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, MapPin, Send, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -6,7 +7,42 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xreapdog', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        const data = await response.json();
+        if (Object.prototype.hasOwnProperty.call(data, 'errors')) {
+          setError(data.errors.map((error: any) => error.message).join(', '));
+        } else {
+          setError('Oops! There was a problem submitting your form');
+        }
+      }
+    } catch (err) {
+      setError('Oops! There was a problem submitting your form');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 pb-16">
@@ -55,72 +91,108 @@ export function Contact() {
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-3xl blur-xl" />
-                <form
-                  action="https://formspree.io/f/xreapdog"
-                  method="POST"
-                  className="relative p-8 bg-zinc-900/50 border border-white/5 rounded-3xl space-y-6"
-                >
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-zinc-300">
-                        Name
-                      </label>
-                      <Input
-                        name="name"
-                        type="text"
-                        placeholder="Your name"
-                        required
-                        className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-zinc-300">
-                        Email
-                      </label>
-                      <Input
-                        name="email"
-                        type="email"
-                        placeholder="your@email.com"
-                        required
-                        className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
-                      />
-                    </div>
-                  </div>
+                <AnimatePresence mode="wait">
+                  {!isSubmitted ? (
+                    <motion.form
+                      key="contact-form"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      onSubmit={handleSubmit}
+                      className="relative p-8 bg-zinc-900/50 border border-white/5 rounded-3xl space-y-6"
+                    >
+                      <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="text-sm font-medium text-zinc-300">
+                            Name
+                          </label>
+                          <Input
+                            name="name"
+                            type="text"
+                            placeholder="Your name"
+                            required
+                            className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-medium text-zinc-300">
+                            Email
+                          </label>
+                          <Input
+                            name="email"
+                            type="email"
+                            placeholder="your@email.com"
+                            required
+                            className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
+                          />
+                        </div>
+                      </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-zinc-300">
-                      Subject
-                    </label>
-                    <Input
-                      name="subject"
-                      type="text"
-                      placeholder="Project inquiry / Domain purchase / Other"
-                      required
-                      className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
-                    />
-                  </div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-medium text-zinc-300">
+                          Subject
+                        </label>
+                        <Input
+                          name="subject"
+                          type="text"
+                          placeholder="Project inquiry / Domain purchase / Other"
+                          required
+                          className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
+                        />
+                      </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-zinc-300">
-                      Message
-                    </label>
-                    <Textarea
-                      name="message"
-                      placeholder="Tell me about your project or inquiry..."
-                      required
-                      rows={5}
-                      className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20 resize-none"
-                    />
-                  </div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-medium text-zinc-300">
+                          Message
+                        </label>
+                        <Textarea
+                          name="message"
+                          placeholder="Tell me about your project or inquiry..."
+                          required
+                          rows={5}
+                          className="bg-zinc-950/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-emerald-500/50 focus:ring-emerald-500/20 resize-none"
+                        />
+                      </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold py-6"
-                  >
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
+                      {error && (
+                        <p className="text-red-400 text-sm bg-red-400/10 p-3 rounded-lg border border-red-400/20">
+                          {error}
+                        </p>
+                      )}
+
+                      <Button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold py-6 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        <Send className={`w-5 h-5 mr-2 ${isSubmitting ? 'animate-pulse' : ''}`} />
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                      </Button>
+                    </motion.form>
+                  ) : (
+                    <motion.div
+                      key="success-message"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="relative p-12 bg-zinc-900/50 border border-emerald-500/20 rounded-3xl text-center space-y-6 flex flex-col items-center justify-center min-h-[400px]"
+                    >
+                      <div className="w-20 h-20 bg-emerald-500/10 rounded-full flex items-center justify-center mb-4">
+                        <Send className="w-10 h-10 text-emerald-400" />
+                      </div>
+                      <h3 className="text-3xl font-bold text-white">Thank You!</h3>
+                      <p className="text-zinc-400 text-lg max-w-sm">
+                        Your message has been sent successfully. I&apos;ll get back to you within 24-48 hours.
+                      </p>
+                      <Button
+                        onClick={() => setIsSubmitted(false)}
+                        variant="outline"
+                        className="mt-4 border-white/10 text-zinc-400 hover:text-white hover:bg-white/5"
+                      >
+                        Send another message
+                      </Button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
 
