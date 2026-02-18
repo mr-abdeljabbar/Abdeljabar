@@ -1,8 +1,13 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 
 import { Navbar } from '@/components/layout';
-import { Home, About, Projects, Domains, Contact } from '@/pages';
+// Lazy load pages for better performance
+const Home = lazy(() => import('@/pages').then(module => ({ default: module.Home })));
+const About = lazy(() => import('@/pages').then(module => ({ default: module.About })));
+const Projects = lazy(() => import('@/pages').then(module => ({ default: module.Projects })));
+const Domains = lazy(() => import('@/pages').then(module => ({ default: module.Domains })));
+const Contact = lazy(() => import('@/pages').then(module => ({ default: module.Contact })));
 import { Github, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import './App.css';
 
@@ -41,13 +46,19 @@ function App() {
         <Navbar />
 
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/domains" element={<Domains />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center bg-zinc-950">
+              <div className="w-8 h-8 border-4 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin" />
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/domains" element={<Domains />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </main>
         {/* Footer */}
         <footer className="border-t border-white/5 bg-zinc-950">

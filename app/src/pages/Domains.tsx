@@ -21,10 +21,9 @@ const domains = [
   },
   {
     domain: 'chort.net',
-    status: 'For Sale' as const,
+    status: 'Sold' as const,
     category: 'Tech',
     price: '$100',
-    buyUrl: 'https://forsale.godaddy.com/forsale/chort.net',
     description:
       'Perfect for gaming brands, edgy communities, or underground culture projects.',
   },
