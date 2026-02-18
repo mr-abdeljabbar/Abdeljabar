@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Filter, Code2, Globe, Database } from 'lucide-react';
+import { Layers, Filter, Code2, Globe, Database, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/cards';
 import { PageHeader } from '@/components/sections';
@@ -9,6 +9,53 @@ import { PageHeader } from '@/components/sections';
 const categories = ['All', 'Frontend', 'Full-Stack', 'SaaS', 'Mobile'];
 
 const projects = [
+  {
+    title: 'NitroGym – Fitness & Gym Website',
+    description:
+      'A fitness business website presenting gym services, workout information, and membership details. Designed as an informational platform to engage visitors and promote fitness services.',
+    image: '/images/nitrogym.png',
+    techStack: [
+      { name: 'HTML', color: 'orange' },
+      { name: 'React', color: 'blue' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Node.js', color: 'green' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://nitrogym.netlify.app/',
+    category: 'Frontend',
+  },
+  {
+    title: 'Construction Company Website',
+    description:
+      'A business website presenting construction services, company overview, and contact information. Designed as a professional informational site to attract potential clients.',
+    image: '/images/ediconstruction.png',
+    techStack: [
+      { name: 'React', color: 'blue' },
+      { name: 'Node.js', color: 'green' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'JavaScript', color: 'yellow' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://ediconstruction-inc.netlify.app/',
+    category: 'Frontend',
+  },
+  {
+    title: 'Excavation & Plumbing Services Website',
+    description:
+      'A service business website presenting excavation and plumbing solutions, company information, and contact details. Designed as an informational site to connect with customers.',
+    image: '/images/excavationandplumbing.png',
+    techStack: [
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'React', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'JavaScript', color: 'yellow' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://excavationandplumbing.netlify.app/',
+    category: 'Frontend',
+  },
   {
     title: 'ChronoMaster – Smart Stopwatch & Timer Web App',
     description:
@@ -231,6 +278,42 @@ export function Projects() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-950 border border-white/10 p-8 sm:p-12 text-center"
+          >
+            {/* Background Gradient */}
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent pointer-events-none" />
+
+            <div className="relative z-10">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Ready to Build Something Amazing?
+              </h2>
+              <p className="text-zinc-400 mb-8 max-w-xl mx-auto text-lg">
+                Let's turn your ideas into reality. High-performance websites, scalable applications, and premium design—tailored just for you.
+              </p>
+
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  className="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold text-lg h-12 px-8 gap-2 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
+                  onClick={() => window.open('https://wa.me/212700789623', '_blank')}
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Chat on WhatsApp
+                </Button>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
