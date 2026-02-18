@@ -69,7 +69,6 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://chronomasterapp.netlify.app/',
-    githubRepo: 'https://github.com/mr-abdeljabbar/Chronomaster/',
     category: 'Frontend',
   },
   {
@@ -85,7 +84,6 @@ const projects = [
       { name: 'Netlify', color: 'red' },
     ],
     liveDemo: 'https://atlasdrive.netlify.app/',
-    githubRepo: 'https://github.com/mr-abdeljabbar/AtlasDrive/',
     category: 'Full-Stack',
   },
   {
@@ -102,7 +100,6 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://librifind.netlify.app/',
-    githubRepo: 'https://github.com/mr-abdeljabbar/LibriFind/',
     category: 'Frontend',
   },
   {
@@ -118,7 +115,6 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://englishschoolkelaa.netlify.app/',
-    githubRepo: 'https://github.com/mr-abdeljabbar/ESK/',
     category: 'Full-Stack',
   },
   {
@@ -134,7 +130,6 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://ladelice.netlify.app/',
-    githubRepo: 'https://github.com/mr-abdeljabbar/La-Delice/',
     category: 'Full-Stack',
   },
   {

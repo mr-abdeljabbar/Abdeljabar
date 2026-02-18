@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Layers } from 'lucide-react';
+import { ExternalLink, Layers } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
@@ -9,7 +9,6 @@ interface ProjectCardProps {
   image: string;
   techStack: { name: string; color: string }[];
   liveDemo?: string;
-  githubRepo?: string;
   category: string;
   index?: number;
 }
@@ -37,7 +36,6 @@ export function ProjectCard({
   image,
   techStack,
   liveDemo,
-  githubRepo,
   category,
   index = 0,
 }: ProjectCardProps) {
@@ -112,19 +110,6 @@ export function ProjectCard({
                 <a href={liveDemo} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4 mr-1.5" />
                   Live Demo
-                </a>
-              </Button>
-            )}
-            {githubRepo && (
-              <Button
-                size="sm"
-                variant="outline"
-                className="flex-1 border-white/10 hover:bg-white/5 text-zinc-300"
-                asChild
-              >
-                <a href={githubRepo} target="_blank" rel="noopener noreferrer">
-                  <Github className="w-4 h-4 mr-1.5" />
-                  GitHub
                 </a>
               </Button>
             )}
