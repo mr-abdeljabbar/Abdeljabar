@@ -26,6 +26,22 @@ const projects = [
     category: 'Frontend',
   },
   {
+    title: 'Centre Al-Ilham – Community & Cultural Center Website',
+    description:
+      'A static informational website presenting the Centre Al-Ilham organization, its mission, services, and contact information. Designed to introduce the center’s activities and help visitors learn more about its offerings.',
+    image: '/images/centre-alilham.png',
+    techStack: [
+      { name: 'React', color: 'blue' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'HTML', color: 'orange' },
+      { name: 'JavaScript', color: 'yellow' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://centre-alilham.netlify.app/',
+    category: 'Frontend',
+  },
+  {
     title: 'Construction Company Website',
     description:
       'A business website presenting construction services, company overview, and contact information. Designed as a professional informational site to attract potential clients.',
