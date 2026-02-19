@@ -168,6 +168,31 @@ export function Contact() {
                         <Send className={`w-5 h-5 mr-2 ${isSubmitting ? 'animate-pulse' : ''}`} />
                         {isSubmitting ? 'Sending...' : 'Send Message'}
                       </Button>
+
+                      <div className="relative">
+                        <div className="absolute inset-0 flex items-center">
+                          <span className="w-full border-t border-white/5" />
+                        </div>
+                        <div className="relative flex justify-center text-xs uppercase">
+                          <span className="bg-zinc-900 px-2 text-zinc-500">Or reach out via</span>
+                        </div>
+                      </div>
+
+                      <a
+                        href="https://wa.me/212700789623"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full"
+                      >
+                        <Button
+                          type="button"
+                          variant="outline"
+                          className="w-full border-emerald-500/20 hover:border-emerald-500/50 bg-emerald-500/5 hover:bg-emerald-500/10 text-emerald-400 py-6 transition-all duration-300"
+                        >
+                          <MessageCircle className="w-5 h-5 mr-2" />
+                          Chat on WhatsApp
+                        </Button>
+                      </a>
                     </motion.form>
                   ) : (
                     <motion.div
