@@ -45,7 +45,7 @@ const projects = [
     title: 'TexasRoofingAndConstruction – Roofing & Construction Services Website',
     description:
       'A static business website presenting professional roofing and construction services, company information, and contact details. Designed as a simple informational platform to showcase service offerings and connect with potential clients.',
-    image: '/images/texasroofing.svg',
+    image: '/images/texasroofing.png',
     techStack: [
       { name: 'HTML', color: 'orange' },
       { name: 'React', color: 'blue' },
