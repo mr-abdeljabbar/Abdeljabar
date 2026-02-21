@@ -42,6 +42,22 @@ const projects = [
     category: 'Frontend',
   },
   {
+    title: 'TexasRoofingAndConstruction – Roofing & Construction Services Website',
+    description:
+      'A static business website presenting professional roofing and construction services, company information, and contact details. Designed as a simple informational platform to showcase service offerings and connect with potential clients.',
+    image: '/images/texasroofing.svg',
+    techStack: [
+      { name: 'HTML', color: 'orange' },
+      { name: 'React', color: 'blue' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'JavaScript', color: 'yellow' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://texasroofingandconstruction.netlify.app/',
+    category: 'Frontend',
+  },
+  {
     title: 'Construction Company Website',
     description:
       'A business website presenting construction services, company overview, and contact information. Designed as a professional informational site to attract potential clients.',
