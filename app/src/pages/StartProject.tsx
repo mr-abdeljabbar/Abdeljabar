@@ -81,7 +81,7 @@ export function StartProject() {
         notes: ''
     });
 
-    const fileInputRef = useRef<HTMLInputElement>(null);
+
 
     const updateFormData = (fields: Partial<typeof formData>) => {
         setFormData(prev => ({ ...prev, ...fields }));
