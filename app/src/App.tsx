@@ -8,6 +8,8 @@ const About = lazy(() => import('@/pages').then(module => ({ default: module.Abo
 const Projects = lazy(() => import('@/pages').then(module => ({ default: module.Projects })));
 const Domains = lazy(() => import('@/pages').then(module => ({ default: module.Domains })));
 const Contact = lazy(() => import('@/pages').then(module => ({ default: module.Contact })));
+const PaymentSuccess = lazy(() => import('@/pages').then(module => ({ default: module.PaymentSuccess })));
+const StartProject = lazy(() => import('@/pages').then(module => ({ default: module.StartProject })));
 import { Github, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import './App.css';
 
@@ -57,6 +59,8 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/domains" element={<Domains />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/payment-success" element={<PaymentSuccess />} />
+              <Route path="/start-project" element={<StartProject />} />
             </Routes>
           </Suspense>
         </main>

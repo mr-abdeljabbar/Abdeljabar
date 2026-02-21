@@ -9,7 +9,6 @@ const navLinks = [
   { name: 'About', path: '/about' },
   { name: 'Live Projects', path: '/projects' },
   { name: 'Domains', path: '/domains' },
-  { name: 'Contact', path: '/contact' },
 ];
 
 
@@ -84,11 +83,11 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <Link
-              to="/contact"
+              to="/start-project"
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-950 bg-emerald-500 rounded-lg hover:bg-emerald-400 transition-colors duration-300"
             >
               <Globe className="w-4 h-4" />
-              Get in Touch
+              Start Project
             </Link>
           </div>
 
@@ -146,11 +145,11 @@ export function Navbar() {
                 className="pt-2"
               >
                 <Link
-                  to="/contact"
+                  to="/start-project"
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-medium text-zinc-950 bg-emerald-500 rounded-lg hover:bg-emerald-400 transition-colors"
                 >
                   <Globe className="w-4 h-4" />
-                  Get in Touch
+                  Start Project
                 </Link>
               </motion.div>
             </div>
