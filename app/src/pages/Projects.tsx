@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Filter, Code2, Globe, Database, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Layers, Filter, Code2, Globe, Database, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/cards';
 import { PageHeader } from '@/components/sections';
@@ -330,14 +331,15 @@ export function Projects() {
               </p>
 
               <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  className="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold text-lg h-12 px-8 gap-2 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
-                  onClick={() => window.open('https://wa.me/212700789623', '_blank')}
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Chat on WhatsApp
-                </Button>
+                <Link to="/start-project">
+                  <Button
+                    size="lg"
+                    className="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold text-lg h-12 px-8 gap-2 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
+                  >
+                    <Sparkles className="w-5 h-5" />
+                    Start a Project !
+                  </Button>
+                </Link>
               </div>
             </div>
           </motion.div>

@@ -13,6 +13,17 @@ const StartProject = lazy(() => import('@/pages').then(module => ({ default: mod
 import { Github, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import './App.css';
 
+const FiverrIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    className={className}
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M17.107 6.429h-3.214V5.357c0-.286.214-.536.535-.536h2.679V1.071h-2.679c-2.357 0-4.286 1.929-4.286 4.286V6.43H7.464V10.71h2.679v12.214h4.286V10.71h3.75l.535-4.286zM6.429 10.714H1.071v4.286h5.358v-4.286z" />
+  </svg>
+);
+
 function ScrollToHashElement() {
   const { hash } = useLocation();
 
@@ -125,6 +136,14 @@ function App() {
                   className="text-zinc-500 hover:text-emerald-400 transition-colors"
                 >
                   <MessageCircle className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.fiverr.com/s/o8lvXz8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-500 hover:text-emerald-400 transition-colors"
+                >
+                  <FiverrIcon className="w-5 h-5" />
                 </a>
               </div>
             </div>

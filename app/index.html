@@ -15,11 +15,44 @@
   <meta name="author" content="Abdeljabar Bougrine" />
   <meta name="google-site-verification" content="gmoEIRk2vXws7EXXo9PwFi4fcAyRAS7x3P4hGULgXsg" />
   <meta name="msvalidate.01" content="4B6735A6E4277140A46146B428D25516" />
-  <link rel="canonical" href="https://abdeljabar.com/" />
+  
+  <!-- Dynamic Canonical and Social Tags -->
+  <script>
+    (function() {
+      const canonicalUrl = 'https://abdeljabar.com' + window.location.pathname.replace(/\/$/, '');
+      const fullUrl = window.location.pathname === '/' ? 'https://abdeljabar.com/' : canonicalUrl;
+      
+      // Set Canonical
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', fullUrl);
+
+      // Set OG URL
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (!ogUrl) {
+        ogUrl = document.createElement('meta');
+        ogUrl.setAttribute('property', 'og:url');
+        document.head.appendChild(ogUrl);
+      }
+      ogUrl.setAttribute('content', fullUrl);
+
+      // Set Twitter URL
+      let twitterUrl = document.querySelector('meta[property="twitter:url"]');
+      if (!twitterUrl) {
+        twitterUrl = document.createElement('meta');
+        twitterUrl.setAttribute('property', 'twitter:url');
+        document.head.appendChild(twitterUrl);
+      }
+      twitterUrl.setAttribute('content', fullUrl);
+    })();
+  </script>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abdeljabar.com/" />
   <meta property="og:title" content="Abdeljabar.com - Full-Stack Developer & Domain Broker" />
   <meta property="og:description"
     content="Dual expertise in full-stack development and digital strategy. Building scalable web apps and curating premium digital real estate." />
@@ -27,7 +60,6 @@
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://abdeljabar.com/" />
   <meta property="twitter:title" content="Abdeljabar.com - Full-Stack Developer & Domain Broker" />
   <meta property="twitter:description"
     content="Dual expertise in full-stack development and digital strategy. Building scalable web apps and curating premium digital real estate." />
