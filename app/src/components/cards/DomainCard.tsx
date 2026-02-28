@@ -10,6 +10,7 @@ interface DomainCardProps {
   price?: string;
   description?: string;
   buyUrl?: string;
+  marketplace?: string;
   index?: number;
 }
 
@@ -50,6 +51,7 @@ export function DomainCard({
   price,
   description,
   buyUrl,
+  marketplace = 'GoDaddy Marketplace',
   index = 0,
 }: DomainCardProps) {
   const statusStyle = statusConfig[status];
@@ -120,7 +122,7 @@ export function DomainCard({
         {/* Trust Element */}
         <div className="flex items-center gap-2 mb-4 text-xs text-zinc-500">
           <Shield className="w-4 h-4 text-emerald-500/60" />
-          <span>GoDaddy Marketplace</span>
+          <span>{marketplace}</span>
         </div>
 
         {/* CTA Button */}

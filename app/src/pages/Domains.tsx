@@ -117,6 +117,16 @@ const domains = [
     description:
       'Perfect for SaaS startups, AI products, or modern tech companies.',
   },
+  {
+    domain: 'BuildingServicesDesign.com',
+    status: 'Premium' as const,
+    category: 'Finance',
+    price: '$378',
+    marketplace: 'Namecheap Marketplace',
+    buyUrl: 'https://buildingservicesdesign.com/',
+    description:
+      'Perfect for tech startups, digital products, or modern innovation platforms.',
+  },
 ];
 
 export function Domains() {
@@ -173,7 +183,7 @@ export function Domains() {
             </div>
             <div className="text-left">
               <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-xs text-zinc-400">GoDaddy Marketplace</div>
+              <div className="text-xs text-zinc-400">Verified Marketplaces</div>
             </div>
           </div>
         </div>
