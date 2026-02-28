@@ -90,7 +90,7 @@ function App() {
               </div>
               <div className="flex items-center gap-6">
                 <a
-                  href="https://www.facebook.com/people/Abdeljabar-Bougrine/61585574073923/"
+                  href="https://www.facebook.com/profile.php?id=61588393573891"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-zinc-500 hover:text-emerald-400 transition-colors"
