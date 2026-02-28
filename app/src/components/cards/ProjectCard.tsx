@@ -76,7 +76,7 @@ export function ProjectCard({
         {/* Content */}
         <div className="p-5 space-y-4">
           <div>
-            <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300">
+            <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300 break-words">
               {title}
             </h3>
             <p className="mt-2 text-sm text-zinc-400 line-clamp-2">
