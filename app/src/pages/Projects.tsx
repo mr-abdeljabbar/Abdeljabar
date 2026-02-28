@@ -179,6 +179,22 @@ const projects = [
     liveDemo: 'http://cerysa.com/',
     category: 'SaaS',
   },
+  {
+    title: 'Victoria Smolyar – Business & IP Attorney Website',
+    description:
+      'A professional legal services website showcasing business and intellectual property law expertise, attorney credentials, and ways for potential clients to get in touch. Designed to present services clearly and establish credibility for a legal practice.',
+    image: '/images/victoriasmolyar.png',
+    techStack: [
+      { name: 'HTML', color: 'orange' },
+      { name: 'React', color: 'blue' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Node.js', color: 'green' },
+      { name: 'Netlify', color: 'blue' },
+    ],
+    liveDemo: 'https://victoriasmolyar.netlify.app/',
+    category: 'Frontend',
+  },
 ];
 
 export function Projects() {
