@@ -76,7 +76,8 @@ export function ProjectCard({
         {/* Content */}
         <div className="p-5 space-y-4">
           <div>
-            <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300 break-words">
+            <h3 className={`font-bold text-white group-hover:text-emerald-400 transition-colors duration-300 break-words leading-snug ${title.length > 40 ? 'text-base' : 'text-lg'
+              }`}>
               {title}
             </h3>
             <p className="mt-2 text-sm text-zinc-400 line-clamp-2">
@@ -109,7 +110,7 @@ export function ProjectCard({
               >
                 <a href={liveDemo} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4 mr-1.5" />
-                  Live Demo
+                  Visit Website
                 </a>
               </Button>
             )}

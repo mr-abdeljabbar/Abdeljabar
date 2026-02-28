@@ -102,9 +102,12 @@ export function DomainCard({
 
         {/* Domain Name */}
         <div className="mb-4">
-          <h3 className={`font-bold text-white group-hover:text-emerald-400 transition-colors duration-300 break-words ${domain.length > 20 ? 'text-xl' : 'text-2xl'
+          <h3 className={`font-bold text-white group-hover:text-emerald-400 transition-colors duration-300 break-words leading-tight tracking-tight ${domain.length > 20 ? 'text-lg' : 'text-xl'
             }`}>
-            {domain}
+            {domain.toLowerCase().split('.')[0]}
+            <span className="text-zinc-500 group-hover:text-emerald-400/60 transition-colors">
+              .{domain.toLowerCase().split('.').slice(1).join('.')}
+            </span>
           </h3>
           {price && (
             <p className="mt-2 text-lg font-semibold text-emerald-400">

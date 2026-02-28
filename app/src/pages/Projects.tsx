@@ -193,7 +193,7 @@ const projects = [
       { name: 'Netlify', color: 'blue' },
     ],
     liveDemo: 'https://victoriasmolyar.netlify.app/',
-    category: 'Frontend',
+    category: 'Full-Stack',
   },
 ];
 
