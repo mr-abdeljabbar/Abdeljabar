@@ -113,7 +113,7 @@ const domains = [
     status: 'Premium' as const,
     category: 'SaaS',
     price: '$150',
-    buyUrl: 'https://cerysa.com/',
+    buyUrl: 'https://forsale.godaddy.com/forsale/cerysa.com',
     description:
       'Perfect for SaaS startups, AI products, or modern tech companies.',
   },
