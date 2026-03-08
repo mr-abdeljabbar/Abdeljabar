@@ -11,6 +11,22 @@ const categories = ['All', 'Frontend', 'Full-Stack', 'SaaS', 'Mobile'];
 
 const projects = [
   {
+    title: 'Clickyx AI – AI Image Generation Platform',
+    description:
+      'An AI-powered web application that enables users to generate images from text prompts. Designed as a creative tool for producing visuals quickly and easily through an intuitive browser-based interface.',
+    image: '/images/clickyx.png',
+    techStack: [
+      { name: 'React', color: 'blue' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Tailwind', color: 'cyan' },
+      { name: 'Node.js', color: 'green' },
+      { name: 'Postgres', color: 'blue' },
+      { name: 'API', color: 'purple' },
+    ],
+    liveDemo: 'https://clickyx.com',
+    category: 'Full-Stack',
+  },
+  {
     title: 'NitroGym – Fitness & Gym Website',
     description:
       'A fitness business website presenting gym services, workout information, and membership details. Designed as an informational platform to engage visitors and promote fitness services.',
