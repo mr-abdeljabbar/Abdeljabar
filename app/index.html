@@ -19,35 +19,22 @@
   <!-- Dynamic Canonical and Social Tags -->
   <script>
     (function() {
-      const canonicalUrl = 'https://abdeljabar.com' + window.location.pathname.replace(/\/$/, '');
-      const fullUrl = window.location.pathname === '/' ? 'https://abdeljabar.com/' : canonicalUrl;
+      const path = window.location.pathname.replace(/\/$/, '') || '/';
+      const fullUrl = 'https://abdeljabar.com' + (path === '/' ? '/' : path);
       
-      // Set Canonical
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', fullUrl);
+      const setTag = (selector, attr, val, createTag) => {
+        let el = document.querySelector(selector);
+        if (!el && createTag) {
+          el = document.createElement(createTag.tag);
+          Object.entries(createTag.attrs).forEach(([k, v]) => el.setAttribute(k, v));
+          document.head.appendChild(el);
+        }
+        if (el) el.setAttribute(attr, val);
+      };
 
-      // Set OG URL
-      let ogUrl = document.querySelector('meta[property="og:url"]');
-      if (!ogUrl) {
-        ogUrl = document.createElement('meta');
-        ogUrl.setAttribute('property', 'og:url');
-        document.head.appendChild(ogUrl);
-      }
-      ogUrl.setAttribute('content', fullUrl);
-
-      // Set Twitter URL
-      let twitterUrl = document.querySelector('meta[property="twitter:url"]');
-      if (!twitterUrl) {
-        twitterUrl = document.createElement('meta');
-        twitterUrl.setAttribute('property', 'twitter:url');
-        document.head.appendChild(twitterUrl);
-      }
-      twitterUrl.setAttribute('content', fullUrl);
+      setTag('link[rel="canonical"]', 'href', fullUrl, { tag: 'link', attrs: { rel: 'canonical' } });
+      setTag('meta[property="og:url"]', 'content', fullUrl, { tag: 'meta', attrs: { property: 'og:url' } });
+      setTag('meta[property="twitter:url"]', 'content', fullUrl, { tag: 'meta', attrs: { property: 'twitter:url' } });
     })();
   </script>
 
