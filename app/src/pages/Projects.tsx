@@ -23,8 +23,8 @@ const projects = [
       { name: 'Postgres', color: 'blue' },
       { name: 'API', color: 'purple' },
     ],
-    liveDemo: 'https://clickyx.com',
-    category: 'Full-Stack',
+    liveDemo: 'https://clickyx.netlify.app/',
+    category: 'SaaS',
   },
   {
     title: 'NitroGym – Fitness & Gym Website',
@@ -192,7 +192,7 @@ const projects = [
       { name: 'JavaScript', color: 'yellow' },
       { name: 'Cloudflare', color: 'orange' },
     ],
-    liveDemo: 'http://cerysa.com/',
+    liveDemo: 'https://cerysa.netlify.app/',
     category: 'SaaS',
   },
   {
