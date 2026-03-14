@@ -14,7 +14,7 @@ const domains = [
     domain: '01fox.com',
     status: 'Premium' as const,
     category: 'Tech',
-    price: '$200',
+    price: '$150',
     buyUrl: 'https://forsale.godaddy.com/forsale/01fox.com',
     description:
       'Perfect for tech startups, digital products, or modern innovation platforms.',
@@ -31,7 +31,7 @@ const domains = [
     domain: 'memeorbit.com',
     status: 'For Sale' as const,
     category: 'Crypto',
-    price: '$150',
+    price: '$100',
     buyUrl: 'https://forsale.godaddy.com/forsale/memeorbit.com',
     description:
       'Perfect for meme platforms, viral content hubs, or social entertainment brands.',
@@ -40,7 +40,7 @@ const domains = [
     domain: 'purpleslot.com',
     status: 'For Sale' as const,
     category: 'Crypto',
-    price: '$150',
+    price: '$100',
     buyUrl: 'https://forsale.godaddy.com/forsale/purpleslot.com',
     description:
       'Perfect for gaming platforms, crypto casinos, or online entertainment brands.',
@@ -49,7 +49,7 @@ const domains = [
     domain: 'syntaxserver.com',
     status: 'For Sale' as const,
     category: 'Crypto',
-    price: '$150',
+    price: '$100',
     buyUrl: 'https://forsale.godaddy.com/forsale/syntaxserver.com',
     description:
       'Perfect for developer platforms, APIs, cloud tools, or backend infrastructure.',
@@ -58,7 +58,7 @@ const domains = [
     domain: 'hidling.com',
     status: 'For Sale' as const,
     category: 'Crypto',
-    price: '$150',
+    price: '$100',
     buyUrl: 'https://forsale.godaddy.com/forsale/hidling.com',
     description:
       'Perfect for privacy tools, security apps, or stealth tech products.',
@@ -67,7 +67,7 @@ const domains = [
     domain: 'happiplus.com',
     status: 'Premium' as const,
     category: 'SaaS',
-    price: '$250',
+    price: '$185',
     buyUrl: 'https://forsale.godaddy.com/forsale/happiplus.com',
     description:
       'Perfect for wellness apps, subscription platforms, or lifestyle services.',
@@ -76,7 +76,7 @@ const domains = [
     domain: 'crateloop.com',
     status: 'For Sale' as const,
     category: 'SaaS',
-    price: '$250',
+    price: '$185',
     buyUrl: 'https://forsale.godaddy.com/forsale/crateloop.com',
     description:
       'Perfect for logistics platforms, SaaS tools, or delivery automation systems.',
@@ -85,7 +85,7 @@ const domains = [
     domain: 'clickyx.com',
     status: 'Premium' as const,
     category: 'Finance',
-    price: '$475',
+    price: '$375',
     buyUrl: 'https://forsale.godaddy.com/forsale/clickyx.com',
     description:
       'Perfect for marketing tools, ad platforms, or growth analytics brands.',
@@ -94,7 +94,7 @@ const domains = [
     domain: 'yieldaro.com',
     status: 'Premium' as const,
     category: 'Finance',
-    price: '$475',
+    price: '$375',
     buyUrl: 'https://forsale.godaddy.com/forsale/yieldaro.com',
     description:
       'Perfect for fintech platforms, investment tools, or performance analytics brands.',
@@ -103,7 +103,7 @@ const domains = [
     domain: 'unaffliction.com',
     status: 'For Sale' as const,
     category: 'SaaS',
-    price: '$150',
+    price: '$100',
     buyUrl: 'https://forsale.godaddy.com/forsale/unaffliction.com',
     description:
       'Perfect for mental health platforms, wellness brands, or motivational projects.',
@@ -112,7 +112,7 @@ const domains = [
     domain: 'cerysa.com',
     status: 'Premium' as const,
     category: 'SaaS',
-    price: '$150',
+    price: '$100',
     buyUrl: 'https://forsale.godaddy.com/forsale/cerysa.com',
     description:
       'Perfect for SaaS startups, AI products, or modern tech companies.',
