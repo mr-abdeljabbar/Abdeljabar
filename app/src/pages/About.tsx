@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Layers, User } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { AboutSection, PageHeader } from '@/components/sections';
 import { useLanguage } from '@/lib/i18n';
@@ -11,6 +12,14 @@ export function About() {
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-20">
+      <Helmet>
+        <title>À Propos | Abdeljabar Bougrine – Développeur Web au Maroc</title>
+        <meta name="description" content="Découvrez Abdeljabar Bougrine, développeur web freelance au Maroc. Spécialiste en création de sites web professionnels pour entreprises marocaines à Marrakech, Casablanca, Rabat et partout au Maroc." />
+        <link rel="alternate" hrefLang="fr" href="https://abdeljabar.com/fr/about" />
+        <link rel="alternate" hrefLang="ar" href="https://abdeljabar.com/ar/about" />
+        <link rel="alternate" hrefLang="en" href="https://abdeljabar.com/en/about" />
+        <link rel="alternate" hrefLang="x-default" href="https://abdeljabar.com/about" />
+      </Helmet>
       <PageHeader
         icon={User}
         badge={a.badge}

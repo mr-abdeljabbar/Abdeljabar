@@ -15,7 +15,7 @@
   <meta name="author" content="Abdeljabar Bougrine" />
   <meta name="geo.region" content="MA" />
   <meta name="geo.country" content="Morocco" />
-  <meta name="language" content="fr, ar" />
+  <meta name="language" content="fr, ar, en" />
   <meta name="google-site-verification" content="gmoEIRk2vXws7EXXo9PwFi4fcAyRAS7x3P4hGULgXsg" />
   <meta name="msvalidate.01" content="4B6735A6E4277140A46146B428D25516" />
   
@@ -48,14 +48,68 @@
   <meta property="og:title" content="Abdeljabar | Sites Web Pro pour Entreprises Marocaines" />
   <meta property="og:description"
     content="Je crée des sites web professionnels qui attirent plus de clients pour votre entreprise au Maroc. Devis gratuit sur WhatsApp." />
-  <meta property="og:image" content="https://abdeljabar.com/og-image.png" />
+  <meta property="og:image" content="https://abdeljabar.com/favicon.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="Abdeljabar | Sites Web Pro au Maroc" />
   <meta property="twitter:description"
     content="Je crée des sites web professionnels pour entreprises marocaines. SEO local, design moderne, livraison rapide." />
-  <meta property="twitter:image" content="https://abdeljabar.com/og-image.png" />
+  <meta property="twitter:image" content="https://abdeljabar.com/favicon.png" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://abdeljabar.com/fr/" />
+  <link rel="alternate" hreflang="ar" href="https://abdeljabar.com/ar/" />
+  <link rel="alternate" hreflang="en" href="https://abdeljabar.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://abdeljabar.com/" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://abdeljabar.com/#business",
+        "name": "Abdeljabar – Création de Sites Web au Maroc",
+        "url": "https://abdeljabar.com",
+        "telephone": "+212700789623",
+        "email": "owner@abdeljabar.com",
+        "description": "Expert en création de sites web professionnels pour entreprises marocaines. Sites vitrines, e-commerce, SEO local. Disponible dans tout le Maroc.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Morocco",
+          "addressCountry": "MA"
+        },
+        "availableLanguage": ["French", "Arabic", "English"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "MA",
+          "addressRegion": "Marrakech-Safi"
+        },
+        "priceRange": "2000 DH – 10000 DH",
+        "sameAs": [
+          "https://www.linkedin.com/in/babdeljabbar",
+          "https://github.com/mr-abdeljabbar",
+          "https://www.instagram.com/go.abdeljabar"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://abdeljabar.com/#person",
+        "name": "Abdeljabar Bougrine",
+        "url": "https://abdeljabar.com",
+        "jobTitle": "Développeur Web",
+        "worksFor": { "@id": "https://abdeljabar.com/#business" },
+        "knowsLanguage": ["fr", "ar", "en"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "MA"
+        }
+      }
+    ]
+  }
+  </script>
 
 </head>
 

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { jsPDF } from 'jspdf';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -294,6 +295,14 @@ export function StartProject() {
   // ── Main ───────────────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-zinc-950 text-white selection:bg-emerald-500/30">
+      <Helmet>
+        <title>Démarrer un Projet Web | Abdeljabar – Création de Sites au Maroc</title>
+        <meta name="description" content="Lancez votre projet de site web professionnel au Maroc. Remplissez notre formulaire pour recevoir un devis personnalisé en moins de 24h. Restaurants, hôtels, boutiques, cabinets médicaux." />
+        <link rel="alternate" hrefLang="fr" href="https://abdeljabar.com/fr/start-project" />
+        <link rel="alternate" hrefLang="ar" href="https://abdeljabar.com/ar/start-project" />
+        <link rel="alternate" hrefLang="en" href="https://abdeljabar.com/en/start-project" />
+        <link rel="alternate" hrefLang="x-default" href="https://abdeljabar.com/start-project" />
+      </Helmet>
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">

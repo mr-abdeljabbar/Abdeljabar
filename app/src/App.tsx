@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, Suspense, lazy } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 
 import { Navbar } from '@/components/layout';
 import { LanguageProvider, useLanguage } from '@/lib/i18n';
@@ -81,7 +82,7 @@ function AppInner() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500/20 to-blue-500/20 border border-white/10 flex items-center justify-center overflow-hidden p-0.5">
-                <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
+                <img src="/logo.png" alt="Abdeljabar Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-zinc-400 text-sm">{t.footer.copy}</span>
             </div>
@@ -126,11 +127,13 @@ function AppInner() {
 
 function App() {
   return (
-    <Router>
-      <LanguageProvider>
-        <AppInner />
-      </LanguageProvider>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <LanguageProvider>
+          <AppInner />
+        </LanguageProvider>
+      </Router>
+    </HelmetProvider>
   );
 }
 

@@ -36,11 +36,7 @@ export function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  const waLink = lang === 'ar'
-    ? 'https://wa.me/212700789623?text=السلام%20عليكم%2C%20بغيت%20عرض%20سعر%20لموقع%20ويب%20احترافي'
-    : lang === 'en'
-    ? 'https://wa.me/212700789623?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20a%20professional%20website'
-    : 'https://wa.me/212700789623?text=Bonjour%2C%20je%20voudrais%20un%20devis%20pour%20un%20site%20web%20professionnel';
+  const startProjectLabel = lang === 'ar' ? '🚀 ابدأ مشروعك' : lang === 'en' ? '🚀 Start a Project' : '🚀 Démarrer un Projet';
 
   return (
     <motion.header
@@ -116,11 +112,11 @@ export function Navbar() {
               <span>{t.nav.phone}</span>
             </a>
 
-            {/* WhatsApp CTA */}
-            <a href={waLink} target="_blank" rel="noopener noreferrer"
+            {/* Start a Project CTA */}
+            <Link to="/start-project"
               className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-zinc-950 bg-emerald-500 rounded-lg hover:bg-emerald-400 transition-colors duration-300 whitespace-nowrap">
-              {t.nav.cta}
-            </a>
+              {startProjectLabel}
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -197,10 +193,10 @@ export function Navbar() {
                 transition={{ delay: (navLinks.length + 1) * 0.07 }}
                 className="pt-1"
               >
-                <a href={waLink} target="_blank" rel="noopener noreferrer"
+                <Link to="/start-project"
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold text-zinc-950 bg-emerald-500 rounded-lg hover:bg-emerald-400 transition-colors">
-                  {t.nav.ctaMobile}
-                </a>
+                  {startProjectLabel}
+                </Link>
               </motion.div>
             </div>
           </motion.div>

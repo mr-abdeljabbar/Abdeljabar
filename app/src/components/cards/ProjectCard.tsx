@@ -35,7 +35,7 @@ export function ProjectCard({ title, description, image, techStack, liveDemo, ca
   const { t } = useLanguage();
 
   return (
-    <motion.div
+    <motion.article
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -47,7 +47,7 @@ export function ProjectCard({ title, description, image, techStack, liveDemo, ca
         {/* Image */}
         <div className="relative aspect-video overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent z-10" />
-          <img src={image} alt={title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+          <img src={image} alt={title} loading="lazy" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
           <div className="absolute top-3 left-3 z-20">
             <Badge variant="secondary" className="bg-zinc-950/80 backdrop-blur-sm text-zinc-300 border-0 text-xs">
               <Layers className="w-3 h-3 mr-1" />{category}
@@ -82,6 +82,6 @@ export function ProjectCard({ title, description, image, techStack, liveDemo, ca
           )}
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }

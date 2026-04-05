@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Layers, Filter, Code2, Globe, Database, Sparkles } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/cards';
 import { PageHeader } from '@/components/sections';
@@ -130,6 +131,14 @@ export function Projects() {
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 pb-16">
+      <Helmet>
+        <title>Projets & Réalisations | Sites Web Créés par Abdeljabar au Maroc</title>
+        <meta name="description" content="Découvrez les projets web réalisés par Abdeljabar : sites vitrines, e-commerce, applications web. Plus de 13 sites livrés pour des entreprises au Maroc et à l'international." />
+        <link rel="alternate" hrefLang="fr" href="https://abdeljabar.com/fr/projects" />
+        <link rel="alternate" hrefLang="ar" href="https://abdeljabar.com/ar/projects" />
+        <link rel="alternate" hrefLang="en" href="https://abdeljabar.com/en/projects" />
+        <link rel="alternate" hrefLang="x-default" href="https://abdeljabar.com/projects" />
+      </Helmet>
       <PageHeader
         icon={Code2}
         badge={p.badge}

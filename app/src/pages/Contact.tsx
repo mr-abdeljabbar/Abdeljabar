@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, MapPin, Send, Linkedin, X, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -55,6 +56,14 @@ export function Contact() {
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 pb-16">
+      <Helmet>
+        <title>Contact | Demandez un Devis Gratuit – Abdeljabar Développeur Web Maroc</title>
+        <meta name="description" content="Contactez Abdeljabar pour votre projet de site web au Maroc. Réponse garantie en moins de 24h. Disponible par email, WhatsApp et réseaux sociaux. Devis gratuit." />
+        <link rel="alternate" hrefLang="fr" href="https://abdeljabar.com/fr/contact" />
+        <link rel="alternate" hrefLang="ar" href="https://abdeljabar.com/ar/contact" />
+        <link rel="alternate" hrefLang="en" href="https://abdeljabar.com/en/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://abdeljabar.com/contact" />
+      </Helmet>
       {/* Header */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0">

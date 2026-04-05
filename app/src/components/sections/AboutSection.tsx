@@ -46,7 +46,7 @@ export function AboutSection({ standalone = true }: AboutSectionProps) {
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-blue-500/20 rounded-2xl blur-2xl transform rotate-3" />
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/50 to-transparent z-10" />
-              <img src="/images/profile.jpg" alt="Profile"
+              <img src="/images/profile.jpg" alt="Abdeljabar Bougrine, développeur web au Maroc" loading="lazy"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
             </div>
           </motion.div>

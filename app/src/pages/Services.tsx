@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check, MessageCircle, Globe, HelpCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/lib/i18n';
 
@@ -16,8 +17,54 @@ export function Services() {
   const { t } = useLanguage();
   const s = t.services;
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Combien coûte un site web professionnel au Maroc ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Nos sites commencent à 2 000 DH pour un site vitrine simple. Le prix dépend du nombre de pages et des fonctionnalités souhaitées. Contactez-nous sur WhatsApp pour un devis gratuit et précis sous 24h.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Combien de temps faut-il pour créer mon site web ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Un site vitrine est livré en 7 à 10 jours. Un site avec SEO local prend 14 à 21 jours. Un e-commerce ou site de réservation entre 21 et 30 jours. Nous respectons toujours les délais convenus.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Mon site sera-t-il visible sur Google ?',
+        acceptedAnswer: { '@type': 'Answer', text: "Oui. Chaque site inclut les bases du SEO technique. Notre offre 'Site Pro + SEO Local' vous place en tête des recherches dans votre ville grâce à une optimisation complète." },
+      },
+      {
+        '@type': 'Question',
+        name: 'Est-ce que je pourrai modifier mon site moi-même ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Oui. Nous vous formons à la gestion de votre site et vous fournissons un guide simple. Pour les modifications plus importantes, nous restons disponibles.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Travaillez-vous avec des clients dans tout le Maroc ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Oui, nous travaillons à distance avec des clients à Casablanca, Marrakech, Rabat, Tanger, Fès, Agadir et partout au Maroc. Tout se passe facilement via WhatsApp et email.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Acceptez-vous le paiement en plusieurs versements ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Oui. Nous proposons 50% au démarrage du projet et 50% à la livraison. Nous acceptons le virement bancaire, cash, et PayPal.' },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 pb-16">
+      <Helmet>
+        <title>Services & Tarifs | Création de Sites Web au Maroc – Abdeljabar</title>
+        <meta name="description" content="Découvrez nos offres de création de sites web professionnels au Maroc : site vitrine, e-commerce, SEO local. Tarifs transparents à partir de 2 000 DH. Livraison en 7 à 30 jours." />
+        <link rel="alternate" hrefLang="fr" href="https://abdeljabar.com/fr/services" />
+        <link rel="alternate" hrefLang="ar" href="https://abdeljabar.com/ar/services" />
+        <link rel="alternate" hrefLang="en" href="https://abdeljabar.com/en/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://abdeljabar.com/services" />
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+      </Helmet>
 
       {/* Header */}
       <section className="relative py-16 lg:py-24 overflow-hidden">

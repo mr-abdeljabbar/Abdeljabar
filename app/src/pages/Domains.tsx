@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Search, Filter, Sparkles, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { DomainCard } from '@/components/cards';
@@ -46,6 +47,14 @@ export function Domains() {
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 pb-16">
+      <Helmet>
+        <title>Noms de Domaine à Vendre | Domaines Premium – Abdeljabar</title>
+        <meta name="description" content="Parcourez notre sélection de noms de domaine premium à vendre : Tech, SaaS, Finance, Crypto. Domaines brandables et mémorables pour vos projets web. Transfert sécurisé via GoDaddy." />
+        <link rel="alternate" hrefLang="fr" href="https://abdeljabar.com/fr/domains" />
+        <link rel="alternate" hrefLang="ar" href="https://abdeljabar.com/ar/domains" />
+        <link rel="alternate" hrefLang="en" href="https://abdeljabar.com/en/domains" />
+        <link rel="alternate" hrefLang="x-default" href="https://abdeljabar.com/domains" />
+      </Helmet>
       <PageHeader
         icon={Globe}
         badge={d.badge}
