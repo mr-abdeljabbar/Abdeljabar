@@ -8,7 +8,7 @@ import { useLanguage, type Lang } from '@/lib/i18n';
 const LANG_OPTIONS: { code: Lang; label: string }[] = [
   { code: 'fr', label: 'FR' },
   { code: 'en', label: 'EN' },
-  { code: 'ar', label: 'عربي' },
+  { code: 'ar', label: 'AR' },
 ];
 
 export function Navbar() {
