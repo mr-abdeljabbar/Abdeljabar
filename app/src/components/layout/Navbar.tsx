@@ -58,7 +58,7 @@ export function Navbar() {
                 <img src="/logo.png" alt="Abdeljabar.com Logo" className="w-full h-full object-cover" />
               </div>
             </div>
-            <span className="hidden sm:block text-lg font-semibold text-white">Abdeljabar.com</span>
+            <span className="gradient-text font-bold text-lg hidden sm:inline">Abdeljabar.com</span>
           </Link>
 
           {/* Desktop Navigation */}

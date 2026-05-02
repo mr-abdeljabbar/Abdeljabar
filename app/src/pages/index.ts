@@ -6,3 +6,4 @@ export { Contact } from './Contact';
 export { PaymentSuccess } from './PaymentSuccess';
 export { StartProject } from './StartProject';
 export { Services } from './Services';
+export { ArabicLanding } from './ArabicLanding';
